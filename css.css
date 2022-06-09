@@ -1,0 +1,894 @@
+*,html,body{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrap{
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Robonto,
+     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+}
+#wrap>div{
+    min-width: none;
+    min-height: none;
+}
+
+
+
+/*모달*/
+#firstPopup{
+    position: absolute;
+    width: 450px;
+    height: 420px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+    top: 300px;
+    left: 500px;
+    overflow: hidden;
+    display: none;
+}
+#firstPopup img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#fpBtn{
+    position: absolute;
+    font-size: 30px;
+    right: 4px;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+/*consult*/
+#consult{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(255, 127, 52);
+    z-index: 20;
+    right: 27px;
+    bottom: 27px;
+}
+#question{
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    z-index: 2;
+    right: 12px;
+    bottom: 12px;
+}
+#question div{
+    position: absolute;
+    font-size: 22px;
+    left: 8px;
+    top: -3px;
+    color: rgb(255, 127, 52);
+}
+#tri{
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    left: 33px;
+    top: 33px;
+}
+
+
+
+
+/*popAdd*/
+#popAdd{
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    display: block;
+}
+#popAddWrap{
+    margin: 0 auto;
+    font-size: 14px;
+    display: flex;
+    padding: 8px 0px;
+    width: 1176px;
+    justify-content: space-between;
+}
+#popAddWrap div:last-child{
+    cursor: pointer;
+}
+
+
+
+/*header*/    
+#header{
+    width: 100%;
+    height: 86px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+#headerWrap{
+    width: 1176px;
+    margin: 0 auto;
+    position: relative;
+}
+#admin{
+    position:absolute;
+    right: 60px;
+    top: 76px;
+    cursor: pointer;
+    visibility: hidden;
+}
+#myPage i{
+    font-size: 38px;
+    color: rgb(170, 170, 170);
+}
+#myPage{
+    font-weight: bolder;
+}
+#myPage:hover #myMenu{
+    visibility: visible;
+}
+#myPage:active #myMenu{
+    visibility: visible;
+}
+#myMenu{
+    background-color: white;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 190px;
+    height: 210px;
+    box-shadow: 2px 2px 4px rgba(88, 88, 88, 0.5);
+    z-index: 5;
+    border-radius: 3px;
+    display: flex;
+    flex-flow: column;
+    visibility: hidden;
+}
+#myMenu div{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: normal;
+}
+#cancel{
+    position: absolute;
+    right: 260px;
+    color: rgb(175, 175, 175);
+    font-size: 14px;
+    visibility: hidden;
+}
+#header div{
+    align-items: center; 
+    display: flex;
+    justify-content: space-between;
+}
+#header div:nth-child(2){
+    cursor: pointer;
+}
+#header img{
+    width: 115px;
+    height: 38px;
+}
+#searchDiv{
+    position: relative;
+    display: block;
+}
+
+#header i{
+    position: absolute;
+    right: 17px;
+}
+#search{
+    margin-left: 27px;
+    width: 410px;
+    height: 47px;
+    border-radius: 30px;
+    background-color: rgb(245, 245, 245);
+}
+input[type="text"]{
+    color: grey;
+    font-size: 14px;
+}
+
+/*히든 창*/
+#sdHidden{
+    z-index: 30;
+    width: 1516px;
+    height: 453px;
+    background-color: white;
+    position: absolute;
+    left: -384px;
+    top: 65px;
+    visibility: hidden;
+}
+#sdHiddenWrap{
+    width: 630px;
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    left: 410px;
+    top: 20px;
+}
+#sdHidden div{
+    width: 630px;
+    margin-bottom: 10px;
+}
+#sdHidden>div>div:nth-child(1){
+    font-weight: bold;
+}
+#reco{
+    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+}
+#reco>span{
+    background-color: rgb(236, 236, 236);
+    border-radius: 15px;
+    height: 30px;
+    margin-right: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+#sdHidden>div>div:nth-child(3){
+    margin-top: 32px;
+    font-weight: bold;
+}
+#popu{
+    display: flex;
+}
+#popu div{
+    margin-top: 4px;
+    width: 49%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+#popu>div>div{
+    width: 100%;
+}
+
+
+
+
+/*nav*/
+#nav{
+    width: 100%;
+}
+#ul1{
+    margin: 0 auto;
+    width: 1176px;
+    height: 52px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+#ul1>li{
+    margin-right: 26px;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: bolder;
+    padding-bottom: 7px;
+    position: relative;
+}
+#ul1>li:hover{
+    border-bottom: 2px solid black;
+}
+
+
+/*첫번째 카테*/
+.empty{
+    visibility: hidden;
+}
+.ul2{
+    left: -20px;
+    top: 44px;
+    width: 210px;
+    list-style: none;
+    z-index: 10;
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgb(238, 237, 237);
+    display: none;
+}
+#ul1>li:hover .ul2{
+    display: block;
+}
+.li2 div:hover{
+    background-color: rgb(248, 247, 247);
+}
+.liTitle div:hover{
+    background-color: white;
+}
+.li2{
+    font-size: 14px;
+    font-weight: normal;
+    position: relative;
+}
+.li2 div{
+    border: 0px solid rebeccapurple !important;
+    margin: 0 10px;
+    padding: 4px 22px;
+}
+.liTitle{
+    font-size: 11px;
+    color: rgb(143, 143, 143);
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: -4px;
+    cursor: default;
+}
+
+
+/*세부 카테*/
+.li2 ul{
+    border: 1px solid rgb(238, 237, 237);
+    list-style: none;
+    background-color: white;
+    position: absolute;
+    left: 208px;
+    top: -42px;
+    width: 210px;
+    width: 210px;
+    display: none;
+}
+.li2 div{
+    border: 0px solid rebeccapurple !important;
+    margin: 0 10px;
+    padding: 4px 22px;
+}
+.li2:hover ul{
+    display: block; 
+}
+
+
+#ul3_1{top: -42px;}
+#ul3_2{top: -74px;}
+#ul3_3{top: -106px;}
+#ul3_4{top: -138px;}
+#ul3_5{top: -170px;}
+#ul3_6{top: -202px;}
+#ul3_7{top: -234px;}
+#ul3_8{top: -266px;}
+
+
+
+
+
+
+
+
+/*slide1*/
+#slide1{
+    width: 100%;
+    height: 424px;
+    display: flex;
+}
+
+/*leftShowbox*/
+#leftShowbox{
+    width: 600px;
+    height: 424px;
+    /* filter: blur(1px); */
+    position: relative;
+    overflow: hidden;
+    border: 200px solid rgb(75, 72, 240) !important;
+    background-color: rgb(75, 72, 240);
+}
+#leftMovebox{
+    position: absolute;
+    display: flex;
+    width: 600px;
+    height: 424px;
+}
+#leftMovebox img{
+    width: 100%;
+    height: 100%;
+}
+
+/*wholeRight - showbox1*/
+#wholeRight{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: calc(100% - 600px);
+    height: 424px;
+    padding-top: 45px;
+}
+#showbox1{
+    position: absolute;
+    width: 640px;
+    height: 415px;
+    left: -447px;
+    top: 45px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+#movebox1{
+    background-color: yellowgreen;
+    position: absolute;
+    width: 2560px;
+    height: 415px;
+    display: flex;
+}
+#movebox1 img{
+    width: 640px;
+    height: 100%;
+}
+
+
+/*wholeRight - showbox2*/
+#showbox2{
+    width: 490px;
+    height: 300px;
+    margin-left: 240px;
+    position: absolute;
+    overflow: hidden;
+}
+#movebox2 .word{
+    width: 490px;
+    height: 300px;
+    font-size: 32px;
+    font-weight: bolder;
+    color: rgb(240, 240, 240);
+}
+.word span{
+   color: rgb(212, 212, 212); 
+   font-size: 15px;
+   font-weight: normal;
+}
+#movebox2{
+    width: 1960px;
+    height: 100%;
+    position:absolute;
+    display: flex;
+}
+
+
+/*wholeRight - animation1*/
+#animation1{
+    position: absolute;
+    bottom: 0;
+    left: 240px;
+    font-size: 20px;
+    width: 490px;
+    height: 70px;
+    display: flex;
+}
+#numShowbox{
+    color: white;
+    position: absolute;
+    top: 16px;
+    width: 15px;
+    height: 50px;
+    font-size: 12px;
+    overflow: hidden;
+}
+#numMovebox{
+    display: flex;
+    position: absolute;
+    width: 60px;
+    height: 50px;
+}
+#numMovebox .num{
+    left: 0;
+    width: 20px;
+    height: 50px;
+    font-weight: bolder;
+}
+#numShowboxNext{
+    color: white;
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    left: 22px;
+    top: 16px;
+    font-size: 12px;
+}
+.line{
+    height: 3px;
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    border-radius: 10%;
+}
+.defaultLine{
+    border: 0px solid rgba(214, 214, 214,0.3) !important;
+    width: 345px;
+    background-color: rgba(214, 214, 214,0.3);
+}
+.moveLine{
+    width: 0;
+    background-color: rgb(255, 255, 255);
+}
+#btn{
+    color: white;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 9px;
+}
+#btn>div{
+    margin-left: 15px;
+    width: 20px;
+    height: 30px;
+}
+
+
+
+/*blackAdd*/
+#blackAdd{
+    margin: 95px auto;
+    width: 1176px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding-left: 40px;
+    padding-top: 35px;
+    font-size: large;
+    cursor: pointer;
+}
+#blackAdd div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#blackAdd img{
+    width: 140px;
+    height: 160px;
+    position: absolute;
+    right: 60px;
+    top: -97px;
+}
+
+
+/*classBox1*/
+#classBox1{
+    width: 1176px;
+    margin: 0 auto;
+}
+.classDivBunch{
+    width: 1176px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.classDiv div{
+    margin-bottom: 4px;
+}
+.classDiv{
+    width: 278px;
+    height: 420px;
+    cursor: pointer;
+}
+
+/*세부*/
+.bigTitle{
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+    width: 1176px;
+    height: 50px;
+}
+.picture{
+    width: 278px;
+    height: 200px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+.picture img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.picture img:hover{
+    transform: scale(1.1);
+}
+.coupon{
+    background-color: rgb(106, 39, 214);
+    position: absolute;
+    width: 67px;
+    height: 25px;
+    left: 10px;
+    top: 10px;
+    border-radius: 2px;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+.heart{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+}
+.heart:hover{
+    background-color: rgba(245, 245, 245,0.3);
+}
+.heart div{
+    position: absolute;
+    font-size: 33px;
+    top: -10px;
+    left: 2px;
+    text-shadow: 2px 2px 2px gainsboro;
+    color: white;
+}
+.countdown{
+    height: 20px;
+    color: white;
+    background-color: rgb(106, 39, 214);
+    border-radius: 3px;
+    margin-top: 5px;
+    font-size: 7px;
+    font-weight: bold;
+    padding: 3px;
+}
+.name{
+    font-size: 11px;  
+    font-weight:600;
+}
+.title{
+    font-size: 14px; 
+}
+.icon{
+    margin-top: 7px;
+    font-size: 11px;
+    color: rgb(145, 145, 145);
+}
+.cbLine{
+    border: 0px !important;
+    margin-top: 10px;
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    height: 0.5px;
+    
+}
+.discountPri{
+    color: rgb(145, 145, 145);
+    margin-top: 10px;
+    text-decoration: line-through;
+    display: inline-flex;
+    flex-flow: row;
+    font-size: 11px;
+}
+.discountPer{
+    display: inline-flex;
+    color: red;
+    font-size: 11px;
+    font-weight: bold;
+}
+.price{
+    font-size: 13px;
+    font-weight: bold;
+}
+.apply div{
+    margin-right: 1px;
+    background-color: rgb(241, 241, 241);
+    display: inline-flex;
+    font-size: 11px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.apply div:first-child{
+    color: red;
+}
+.apply div:last-child{
+    color: rgb(145, 145, 145);
+}
+
+
+
+/*classBox2*/
+#classBox2{
+    width: 1176px;
+    margin: 0 auto;
+}
+.picture2{
+    width: 278px;
+    height: 370px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+.picture2 img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.picture2 img:hover{
+    transform: scale(1.1);
+}
+.picture2 iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.coupon2{
+    background-color: rgb(255, 118, 38);
+    position: absolute;
+    width: 67px;
+    height: 25px;
+    left: 10px;
+    top: 10px;
+    border-radius: 2px;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+
+
+
+
+
+/*popularCate*/
+.pcTitle{
+    margin-top: 100px;
+}
+#popularCate{
+    width: 1176px;
+    margin: 0 auto;
+}
+.pcWrap{
+    margin: 0 auto;
+    width: 1176px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.pcWrap div{
+    width: 278px;
+    height: 95px;
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    padding: 23px;
+    cursor: pointer;
+}
+
+
+
+
+/*footer1*/
+#footer1{
+    width: 100%;
+    border:1px solid rgb(245, 245, 245);
+    margin-top: 50px;
+}
+#f1Wrap{
+    width: 1176px;
+    margin: 0 auto;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.f1Div1{
+    width: 365px;
+    margin-right: 10px;
+}
+.f1Div1 div{
+    margin-bottom: 10px;
+}
+.f1Div1 img{
+    width: 110px;
+    height: 35px;
+}
+
+
+.f1Div2{
+    width: 500px;
+    display: flex;
+}
+.f1Div2Div{
+    width: 240px;
+    display: flex;
+    flex-flow: column;
+    margin-right: 20px;
+}
+.f1Div2Div div{
+    width: 240px;
+    height: 38px;
+    border-radius: 3px;
+    padding-top: 7px;
+    padding-left: 10px;
+}
+.f1Title{
+    font-weight: bold;
+}
+.f1Div3{
+    width: 270px;
+}
+.f1Div3 div{
+    width: 270px;
+    height: 38px;
+    border-radius: 3px;
+    padding-top: 7px;
+    padding-left: 10px;
+}
+.f1Click{
+    cursor: pointer;
+}
+.f1Click:hover{
+    background-color: rgb(245, 245, 245);
+}
+
+
+/*footer2*/
+#footer2{
+    margin-top: 90px;
+    width: 100%;
+    border:1px solid rgb(245, 245, 245);
+}
+#f2Wrap{
+    margin: 30px auto;
+    width: 1176px;
+    display: flex;
+}
+.f2Div1{
+    width: 365px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    font-size: 11px;
+    color: rgb(167, 167, 167);
+    cursor: pointer;
+    margin-right: 25px;
+}
+.f2Div2{
+    width: 787px;
+}
+.f2Div2Div1{
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 11px;
+    color: rgb(167, 167, 167);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.f2Div2Div1 div{
+    line-height: 1.5;
+}
+.f2Div1 div:hover, .f2Div2Div1 div:hover{
+    color: black;
+}
+.f2Div2Div2{
+    font-size: 10px;
+    color: rgb(192, 192, 192);
+}
+
+
+
+/*반응형 웹*/
+@media (max-width:800px){
+    #searchDiv{
+        display: none;
+    }
+    #classbox1{
+        width: 80%;
+    }
+
+}
