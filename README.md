@@ -1,5 +1,5 @@
 # CLASS101
-CLASS101 홈페이지 홈화면 만들기
+CLASS101 홈 페이지 만들기
 <p align='center'>
   <img width='80%' src='https://user-images.githubusercontent.com/91243121/173186546-4bba5538-1dd1-40df-9335-af745d03a11c.jpg'>
   <br><br><br><br><br>
